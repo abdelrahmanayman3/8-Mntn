@@ -10,8 +10,12 @@
   --jasmine: #fbd784;
   --bg: #0b1d26;
 }
+html{
+     scroll-behavior: smooth;
+}
 body {
   background-color: var(--bg);
+ 
 }
 .container {
   padding: 0 15px;
@@ -48,14 +52,14 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
-header .logo a {
-    font-size: 25px;
-    font-family:none;
+.logo a {
+  font-size: 25px;
+  font-family: none;
   color: var(--white);
 }
 a {
   text-decoration: none;
-  color:var(--white);
+  color: var(--white);
 }
 
 header nav input {
@@ -97,26 +101,26 @@ header nav input {
   header nav ul {
     display: flex;
   }
-   header nav ul li {
+  header nav ul li {
     padding: 20px;
-   }
+  }
 }
 .subtitle {
   position: relative;
   padding-left: 50px;
   letter-spacing: 3px;
   font-weight: bold;
-   text-transform: uppercase;
+  text-transform: uppercase;
   color: var(--jasmine);
 }
 .subtitle::before {
   content: "";
   position: absolute;
-   top: 8px;
+  top: 8px;
   left: 0;
   width: 40px;
   height: 1px;
-background-color:var(--jasmine);
+  background-color: var(--jasmine);
 }
 .hero {
   height: 100vh;
@@ -138,9 +142,8 @@ background-color:var(--jasmine);
   display: flex;
   align-items: center;
   gap: 10px;
- margin-top: 20px;
-   color: var(--white);
-  
+  margin-top: 20px;
+  color: var(--white);
 }
 .article {
   padding: 60px 0;
@@ -156,8 +159,87 @@ background-color:var(--jasmine);
   color: var(--white);
 }
 @media (min-width: 992px) {
-  .article  article,.article image {
-width: 40%;
+  .article article,
+  .article image {
+    width: 40%;
   }
 }
-
+@media (max-width: 991px) {
+  .article .container {
+    flex-wrap: wrap;
+  }
+}
+.article h2 {
+  position: relative;
+  margin: 20px 0;
+}
+.article h2::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: -20px;
+  font-size: 140px;
+  color: rgba(255, 255, 255, 0.131);
+}
+.article-1 h2::before {
+  content: "01";
+}
+.article-2 h2::before {
+  content: "02";
+}
+.article-3 h2::before {
+  content: "03";
+}
+.article-2 .container {
+  flex-direction: row-reverse;
+}
+article p {
+  line-height: 1.5;
+  color: var(--white);
+}
+.article a {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  color: var(--jasmine);
+}
+article span {
+  color: gray;
+}
+footer {
+  padding: 20px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .info .logo {
+  padding-bottom: 50px;
+}
+footer .container .info article p {
+  padding-bottom: 20px;
+}
+footer .container .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+@media (max-width: 991px) {
+  footer .container {
+    flex-wrap: wrap;
+  }
+  footer .container .info {
+    padding-bottom: 50px;
+  }
+}
+footer .links h3 {
+  padding-bottom: 20px;
+  color: var(--jasmine);
+}
+footer .links li {
+  padding-bottom: 10px;
+}
+footer .links li a {
+  padding: 10px 0;
+}
