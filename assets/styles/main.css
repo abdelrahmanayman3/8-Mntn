@@ -53,7 +53,7 @@ header .logo a {
     font-family:none;
   color: var(--white);
 }
-header a {
+a {
   text-decoration: none;
   color:var(--white);
 }
@@ -101,3 +101,63 @@ header nav input {
     padding: 20px;
    }
 }
+.subtitle {
+  position: relative;
+  padding-left: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+   text-transform: uppercase;
+  color: var(--jasmine);
+}
+.subtitle::before {
+  content: "";
+  position: absolute;
+   top: 8px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+background-color:var(--jasmine);
+}
+.hero {
+  height: 100vh;
+  background-image: url(../images/hero.webp);
+  background-size: 100% 100%;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.5;
+  color: var(--white);
+}
+.hero a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ margin-top: 20px;
+   color: var(--white);
+  
+}
+.article {
+  padding: 60px 0;
+  box-shadow: 0 0 100px 100px var(--bg);
+}
+.article .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.article article {
+  color: var(--white);
+}
+@media (min-width: 992px) {
+  .article  article,.article image {
+width: 40%;
+  }
+}
+
